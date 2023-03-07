@@ -1,0 +1,134 @@
+
+
+.dbapp {
+    background-color: red;
+}
+
+.dashboardSection {
+    width: 100%;
+    padding: 90px 0px;
+    overflow-y: auto;
+    border-radius: 2em 0px 0px 0px;
+    background-color: #eee;
+    height: 100%;
+}
+
+.corner  {
+    background-color: black;
+    width: 60px;
+    height: 40px;
+    display: flex;
+    border-radius: 12px 0px 0px 0px;
+    flex-direction: row;
+}
+
+.dcorner {
+    background-color: #f8f9fa !important;
+    width: 100%;
+    border-radius: 2em 0px 0px 0px;
+    height: 100% ;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.dbhead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+
+.dbtitle {
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #342e37;
+}
+
+.dbheadbtn {
+    background-color: #3c91e6 !important ; 
+    color: white;
+    border-radius: 36px;
+    font-weight: 600 !important;
+    width: ;
+}
+
+.dcards {
+    margin: 36px 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+.dcardparent {
+    background-color :#eee;
+    border: none !important;
+}
+
+.dcard {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 24px;
+    margin: 7px 36px;
+    min-width: 320px;
+}
+
+.dcardicondiv {
+    background-color : #cfe8ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+}
+
+.dcardicon {
+   width: 36px;
+   height: 39px;
+   color : #3c91e6;
+   padding: 4px;
+}
+
+
+.cdProduct {
+background-color: #fff2c6;
+}
+.cardProduct {
+    color: #ffce26;
+}
+
+
+.cdMoney {
+    background-color: #ffe0d3;
+}
+.cardMoney {
+    color: #ffe0d3;
+    background-color:#fd7238;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}
+
+
+
+
+@media screen and (max-width: 480px) {
+
+    .dbhead {
+        justify-content: center;
+    }
+
+    .dbtitle {
+        padding: 10px;
+    }
+
+}
+
+

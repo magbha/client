@@ -1,0 +1,88 @@
+
+.dnavbar {
+	padding: 0px 24px;
+}
+
+.profile img {
+	width: 36px;
+	height: 36px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.dbellparent {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0px 0.3em;
+    position: relative !important;
+}
+
+.dbell {
+    width: 25px;
+	height: 25px;
+	object-fit: cover;
+}
+
+.dsearchparent {
+    border-radius:  0px 49px 49px 0px !important;
+    background-color: #116149	 !important;
+}
+
+.dsearch {
+	color: aliceblue;
+}
+
+
+.dinput {
+    border-radius: 36px 0px 0px 36px  !important;
+}
+
+.num {
+	position: absolute;
+	top: 5px;
+	right: 3px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 2px solid var(--light);
+	background: var(--red);
+	color: white;
+	font-weight: 700;
+	font-size: 12px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    background-color: #116149;
+}
+
+
+.dbrand {
+    color: black !important; 
+}
+
+/* .dropdown-menu {
+	display: flex !important;
+	justify-content: center !important;
+	flex-direction: column !important;
+	align-items: center;
+} */
+
+.logoutbtn {
+    border: 1px solid rgb(0, 0, 0) !important;
+    background-color: #00ED64 !important;
+    color: black !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+	width: 70%;
+}
+
+.dropdown-toggle::after {
+	display: none !important; 
+  }
+
+.Bnavs {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}

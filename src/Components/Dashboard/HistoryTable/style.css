@@ -1,0 +1,38 @@
+.cont {
+  height: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contt {
+  background-color: #f8f9fa;
+  width: 90%;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.TableHeading {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+
+.tButtons { 
+    display: flex;
+}
+
+.tButtons button {
+    margin: 0px 4px;
+    border: none !important;
+    background-color: inherit;
+}
+
+.Htable {
+  width: 100%;
+  background-color: #f9f9f9;
+  min-width: 420px;
+  overflow-x: scroll;
+}
+

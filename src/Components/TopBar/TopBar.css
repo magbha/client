@@ -1,0 +1,53 @@
+
+.trybtn {
+    padding: 0.8em 2em !important;
+    border: 1px solid rgb(0, 0, 0) !important;
+    background-color: #00ED64 !important;
+    color: black !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+
+}
+
+.signbtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black !important;
+    font-size: 1.1em !important;
+    margin: 0.2em 2em !important;
+    font-weight: 100 !important;
+    text-decoration: none !important;
+}
+
+.btnsnav {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    margin-left: 5em !important;
+}
+
+.brand {
+    color: black !important;
+    font-size: 2em !important;
+    font-weight: 400 !important;
+    margin-right: 2em!important;
+}
+
+.navlists {
+    color: black !important;
+    font-size: 1.1em !important;
+    font-weight: 100 !important;
+}
+
+
+.navtog {
+    background-color: #00ED64 !important;
+}
+
+.topbar1 {
+    border-bottom: 1px solid #8d8a8a;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}

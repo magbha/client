@@ -1,0 +1,32 @@
+.branchPill {
+    background-color: #fd7238;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 4px 20px;
+    border-radius: 26px;
+}
+
+.itemPill {
+    background-color: #fd7238;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 15px;
+}
+
+.qtyPill {
+    background-color: #3c91e6;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 4px 4px;
+}
+
+.datePill {
+    background-color: #8f9aa5;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 4px;
+}
