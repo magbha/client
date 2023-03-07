@@ -2,6 +2,9 @@ import { FAIL, LOADING, SIGN_IN, SIGN_UP , CURRENT, LOGOUT, GET_TEAM} from "../A
 import axios from "axios";
 import {toast} from "react-toastify"
 
+
+
+
 export const signUp = (newUser , navigate ) => async (dispatch) => {
     dispatch({ type: LOADING });
     try {
@@ -35,7 +38,7 @@ export const signUp = (newUser , navigate ) => async (dispatch) => {
   export const logIn = (userInfo , navigate) => async (dispatch) => {
     dispatch({type : LOADING})
     try {
-        let resault = await axios.post("/api/user/login" , userInfo)
+        let resault = await axios.post("api/user/login" , userInfo)
         dispatch({type : SIGN_IN , payload : resault.data})
         navigate("/dash")
     } catch (error) {
