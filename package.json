@@ -48,7 +48,7 @@
             "last 1 safari version"
         ]
     },
-    "proxy": "http://127.0.0.1:3289",
+    "proxy": "https://stroom-api.onrender.com",
     "devDependencies": {
         "eslint": "^8.35.0",
         "eslint-config-react-app": "^7.0.1"
