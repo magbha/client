@@ -11,7 +11,7 @@ export const getItems = (id) => async (dispatch) => {
     dispatch({type : LOAD_ITEM})
     try {
     const config = {headers : {authorization : localStorage.getItem("token")}}
-        let resault = await axios.get(`/api/item/getItems/${id}` , config)
+        let resault = await axios.get(`https://stroom-api.onrender.com/api/item/getItems/${id}` , config)
         dispatch({type : GET_ITEMS , payload : resault.data})
     } catch (error) {
         toast.error(error.response.data.msg , {toastId : "error1"})
@@ -23,7 +23,7 @@ export const addItem = (newItem , handleClose , itemBranch) => async (dispatch) 
     dispatch({type : LOAD_ITEM})
     try {
         const config = {headers : {authorization : localStorage.getItem("token")}}
-        let resault = await axios.post("/api/item/add-item" , newItem , config) 
+        let resault = await axios.post("https://stroom-api.onrender.com/api/item/add-item" , newItem , config) 
         handleClose()
         await dispatch(getItems(itemBranch))
         toast.success("Item Created")
@@ -39,7 +39,7 @@ export const deleteItem = (id , itemBranch , navigate) => async (dispatch) => {
     dispatch({type : LOAD_ITEM})
     try {
     const config = {headers : {authorization : localStorage.getItem("token")}}
-        let resault = await axios.delete(`/api/item/${id}` , config)
+        let resault = await axios.delete(`https://stroom-api.onrender.com/api/item/${id}` , config)
         dispatch(getItems(itemBranch))
         navigate("/products")
     } catch (error) {
@@ -53,7 +53,7 @@ export const editItem = (id , newItem , itemBranch , navigate) => async (dispatc
     dispatch({type : LOAD_ITEM})
     try {
     const config = {headers : {authorization : localStorage.getItem("token")}}
-    const resault = await axios.put(`/api/item/${id}` , newItem , config)
+    const resault = await axios.put(`https://stroom-api.onrender.com/api/item/${id}` , newItem , config)
         dispatch(getItems(itemBranch))
         navigate("/products")
         toast.success(resault.data.msg)
@@ -67,7 +67,7 @@ export const getItem = (_id) => async (dispatch) => {
     dispatch({type : LOAD_ITEM})
     try {
         const config = {headers : {authorization : localStorage.getItem("token")}}
-        let resault = await axios.get(`/api/item/${_id}` , config)
+        let resault = await axios.get(`https://stroom-api.onrender.com/api/item/${_id}` , config)
         dispatch({type : GET_ITEM , payload : resault.data})
     } catch (error) {
         toast.error(error.response.data.msg)

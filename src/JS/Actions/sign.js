@@ -38,7 +38,7 @@ export const signUp = (newUser , navigate ) => async (dispatch) => {
   export const logIn = (userInfo , navigate) => async (dispatch) => {
     dispatch({type : LOADING})
     try {
-        let resault = await axios.post("api/user/login" , userInfo)
+        let resault = await axios.post("https://stroom-api.onrender.comapi/user/login" , userInfo)
         dispatch({type : SIGN_IN , payload : resault.data})
         navigate("/dash")
     } catch (error) {
@@ -54,7 +54,7 @@ export const  currentUser = () => async (dispatch) => {
   dispatch({type : LOADING})
   try {
     const config = {headers : {authorization : localStorage.getItem("token")}}
-      let resault = await axios.get("/api/user/current-user" , config)
+      let resault = await axios.get("https://stroom-api.onrender.com/api/user/current-user" , config)
       dispatch({type : CURRENT , payload : resault.data})
   } catch (error) {
       dispatch({ type: FAIL, payload: error.response.data.msg });
@@ -78,7 +78,7 @@ export const getTeam = () => async (dispatch) => {
   dispatch({type : LOADING})
   try {
   const config = await {headers : {authorization : localStorage.getItem("token")}}
-      let resault = await axios.get("/api/user/all-users" , config)
+      let resault = await axios.get("https://stroom-api.onrender.com/api/user/all-users" , config)
       dispatch({type : GET_TEAM , payload : resault.data})
   } catch (error) {
       dispatch({type : FAIL , payload : error.response.data.msg})
@@ -90,7 +90,7 @@ export const removeAlerts = () => async (dispatch) => {
   dispatch({type : LOADING})
   try {
   const config = await {headers : {authorization : localStorage.getItem("token")}}
-      const resault = await axios.put("/api/user/removeAlerts" , config)
+      const resault = await axios.put("https://stroom-api.onrender.com/api/user/removeAlerts" , config)
       toast.success("Done")
     dispatch({type : CURRENT})
   } catch (error) {
