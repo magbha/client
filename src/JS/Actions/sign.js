@@ -40,7 +40,8 @@ export const signUp = (newUser , navigate ) => async (dispatch) => {
         navigate("/dash")
     } catch (error) {
         toast.error(error.response.data.msg)
-        dispatch({ type: FAIL, payload: error.response.data.msg });
+
+        dispatch({ type: FAIL, payload: error });
     }
 }
 
