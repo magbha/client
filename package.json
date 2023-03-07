@@ -51,5 +51,6 @@
     "devDependencies": {
         "eslint": "^8.35.0",
         "eslint-config-react-app": "^7.0.1"
-    }
+    },
+    "proxy" : "https://stroom-api.onrender.com"
 }
