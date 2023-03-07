@@ -47,7 +47,7 @@ const DashboardPage = () => {
                 <Card.Body>
                   <div>
                     <h3>Name</h3>
-                    <p>{user.firstName}</p>
+                    <p>{user?.firstName}</p>
                   </div>
                 </Card.Body>
               </Card>
