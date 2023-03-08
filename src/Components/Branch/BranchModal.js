@@ -9,7 +9,7 @@ import { addBranch } from "../../JS/Actions/branch";
 
 
 const BranchModal = ({ show, handleClose }) => {
-  const branchBusiness = useSelector((state) => state.persistedReducer.currentUser._id) 
+  const branchBusiness = useSelector((state) => state.persistedReducer?.currentUser?._id) 
   const Loading = useSelector((state) => state.branchReducer.loading) 
 
   const dispatch = useDispatch();
