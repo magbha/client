@@ -1,4 +1,4 @@
-import axios from "axios"
+import axios from "../../Instance/axios"
 import { toast } from "react-toastify"
 import { FAIL_ITEM, GET_ITEM, GET_ITEMS, LOAD_ITEM } from "../ActionTypes/item"
 

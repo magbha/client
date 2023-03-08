@@ -1,5 +1,5 @@
 import { FAIL_BRANCH, GET_BRANCH, GET_BRANCHES, LOAD_BRANCH } from "../ActionTypes/branch"
-import axios from "axios"
+import axios from "../../Instance/axios"
 import { toast } from "react-toastify"
 
 
