@@ -6,6 +6,7 @@ import Image from "react-bootstrap/Image";
 import "./style.css";
 import useWindowSize from "../../Components/ScreenSize";
 import { Button } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
 const LandingPage = () => {
   const sSize = useWindowSize();
@@ -17,7 +18,7 @@ const LandingPage = () => {
             <Container fluid className="typographyParent">
                 <h1>Manage Your <br /> Business Online</h1>          
                 <p>Now You Can Manage Your Business Online And Keep Track Of your Inventory and Be in Touch with your business and your Team</p>  
-               <div className="bDiv"> <Button className='trybtn'  >Try Free</Button> </div> 
+               <div className="bDiv"> <NavLink className="trybtn" to={"/sign-up"}>Try Free</NavLink> </div> 
             </Container>
         </Container>
         {sSize.width > 983 ? (
