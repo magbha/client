@@ -8,5 +8,5 @@ export default axios.create({
         'Content-Type': 'application/json',
         'Access-Control-Allow-Methods':'GET,PUT,POST,DELETE,PATCH,OPTIONS',
     },
-    withCredentials: false
+    withCredentials: true
 })
