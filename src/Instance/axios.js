@@ -7,5 +7,5 @@ export default axios.create({
         'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
     },
-    'Access-Control-Allow-Credentials': true
+    withCredentials: true
 })
