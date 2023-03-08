@@ -7,9 +7,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addItem } from '../../JS/Actions/item';
 
 function AddModal({show , handleClose}) {
-  const user = useSelector((state) => state.persistedReducer.currentUser);
-  const Loading = useSelector((state) => state.itemReducer.loading);
-  const selectedBranch = useSelector((state) => state.branchReducer.selectedBranch);
+  const user = useSelector((state) => state.persistedReducer?.currentUser);
+  const Loading = useSelector((state) => state.itemReducer?.loading);
+  const selectedBranch = useSelector((state) => state.branchReducer?.selectedBranch);
 
   
   
@@ -18,7 +18,7 @@ function AddModal({show , handleClose}) {
   const dispatch = useDispatch();
   const [newItem, setnewItem] = useState({});
   const thisDate = new Date().toLocaleDateString('en-GB');
-  const userBranch = user.workBranch;
+  const userBranch = user?.workBranch;
 
   
   const handelChange = (e) => {
