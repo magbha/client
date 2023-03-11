@@ -5,7 +5,6 @@ import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import { useDispatch, useSelector } from "react-redux";
 import { signTeam } from "../../JS/Actions/sign";
-import { toast } from "react-toastify";
 
 const AddTeam = ({ showT, handleCloseT }) => {
   const boss = useSelector((state) => state.persistedReducer.currentUser);
@@ -121,7 +120,7 @@ const AddTeam = ({ showT, handleCloseT }) => {
         </Form.Group>
 
         <div className="Sbtns d-flex justify-content-center">
-          <Button className="Sendbtn" type="submit" >
+          <Button className="Sendbtn" type="submit" disabled={Loading}>
           {Loading ? <> "Submiting " <Spinner animation="border" variant="success" /> </> : "Submit"}
           </Button>
         </div>
