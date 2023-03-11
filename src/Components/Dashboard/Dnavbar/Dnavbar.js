@@ -19,7 +19,7 @@ const Dnavbar = () => {
     <div >
 	<Navbar  collapseOnSelect expand="lg" bg="light" variant="dark">
 	<Container fluid>
-	  <Navbar.Toggle aria-controls="responsive-navbar-nav" > <BsFillArrowDownSquareFill/> </Navbar.Toggle>
+	  <Navbar.Toggle aria-controls="responsive-navbar-nav" > <BsFillArrowDownSquareFill className="bg-dark"/> </Navbar.Toggle>
 	  <Navbar.Collapse  id="responsive-navbar-nav">
 		<Nav className="me-auto">
 	
