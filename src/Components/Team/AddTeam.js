@@ -9,7 +9,6 @@ import { toast } from "react-toastify";
 
 const AddTeam = ({ showT, handleCloseT }) => {
   const boss = useSelector((state) => state.persistedReducer.currentUser);
-  const fail = useSelector((state) => state.persistedReducer.fail);
   const branchList = useSelector((state) => state?.branchReducer.branchList);
   const Loading = useSelector((state) => state.persistedReducer.loading);
 
@@ -40,7 +39,7 @@ const AddTeam = ({ showT, handleCloseT }) => {
         <Modal.Header closeButton>
           <Modal.Title>
             Add new Team
-            {Loading == true ? (
+            {Loading ? (
               <Spinner animation="border" variant="success" />
             ) : null}
           </Modal.Title>
@@ -123,7 +122,7 @@ const AddTeam = ({ showT, handleCloseT }) => {
 
         <div className="Sbtns d-flex justify-content-center">
           <Button className="Sendbtn" type="submit" >
-            Submit
+          {Loading ? <> "Submiting " <Spinner animation="border" variant="success" /> </> : "Submit"}
           </Button>
         </div>
       </Form>

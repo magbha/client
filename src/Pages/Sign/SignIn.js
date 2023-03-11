@@ -7,6 +7,8 @@ import { NavLink, useNavigate } from "react-router-dom";
 import useWindowSize from "../../Components/ScreenSize";
 import { logIn } from "../../JS/Actions/sign";
 import "./sin.css";
+import Spinner from "react-bootstrap/Spinner";
+
 
 import SignIMG from "./SignINIMG.svg";
 const SignIn = () => {
@@ -54,7 +56,7 @@ const SignIn = () => {
         </Form.Group>
         <div className="sinSbtns d-flex justify-content-center">
           <Button onClick={handleSubmit} className="sinSendbtn" type="submit" disabled={loading}>
-            Submit
+            {loading ? <> "Submiting " <Spinner animation="border" variant="success" /> </> : "Submit"}
           </Button>
           <div className="sinSignSpanDiv">
           <span className="sinSignspan ">   

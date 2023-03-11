@@ -28,7 +28,7 @@ const BranchModal = ({ show, handleClose }) => {
       {" "}
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Add nwe Branch {Loading == true ? <Spinner animation="border" variant="success" /> : null}</Modal.Title>
+          <Modal.Title>Add nwe Branch {Loading ? <Spinner animation="border" variant="success" /> : null}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form>
@@ -72,8 +72,8 @@ const BranchModal = ({ show, handleClose }) => {
               controlId="formBasicCheckbox"
             ></Form.Group>
             <div className="Sbtns d-flex justify-content-center">
-              <Button onClick={handleSubmit} className="Sendbtn" type="submit">
-                Submit
+              <Button onClick={handleSubmit} className="Sendbtn" type="submit" disabled={Loading}>
+              {Loading ? <> "Submiting " <Spinner animation="border" variant="success" /> </> : "Submit"}
               </Button>
             </div>
           </Form>

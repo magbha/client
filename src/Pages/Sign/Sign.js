@@ -2,17 +2,17 @@ import React, { useState } from "react";
 import { Container, Image, Navbar } from "react-bootstrap";
 import Button from "react-bootstrap/esm/Button";
 import Form from "react-bootstrap/Form";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
 import useWindowSize from "../../Components/ScreenSize";
 import { signUp } from "../../JS/Actions/sign";
 import "./style.css";
-
+import Spinner from "react-bootstrap/Spinner";
 import SignIMG from "./SignIMG.svg";
 
 const Sign = () => {
   const sSize = useWindowSize();
-
+  const loading = useSelector((state) => state?.persistedReducer?.loading)
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [newUser, setNewUser] = useState({});
@@ -99,7 +99,9 @@ const Sign = () => {
                 />
               </Form.Group>
               <div className="Sbtns d-flex justify-content-center">
-              <Button onClick={handleSubmit} className="Sendbtn" type="submit">Submit</Button>
+              <Button onClick={handleSubmit} className="Sendbtn" type="submit" disabled={loading}>
+            {loading ? <> "Submiting " <Spinner animation="border" variant="success" /> </> : "Submit"}
+              </Button>
               <span className='signspan'>   Have an account? <NavLink  className='Signbtn'  to="/sign-in">Log In now  </NavLink> </span>
 
               </div>
