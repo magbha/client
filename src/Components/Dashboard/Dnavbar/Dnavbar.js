@@ -4,14 +4,12 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import InputGroup from 'react-bootstrap/InputGroup';
-import Form from 'react-bootstrap/Form';
-import Image from 'react-bootstrap/Image'
 
-import { BsFillBellFill, BsPersonCircle, BsSearch } from "react-icons/bs";
+
+import { BsFillBellFill, BsPersonCircle,  } from "react-icons/bs";
 import { Button } from "react-bootstrap";
 import { logOut } from "../../../JS/Actions/sign";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 const Dnavbar = () => {
@@ -21,7 +19,7 @@ const Dnavbar = () => {
     <div >
 	<Navbar  collapseOnSelect expand="lg" bg="light" variant="dark">
 	<Container fluid>
-	  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+	  <Navbar.Toggle aria-controls="responsive-navbar-nav" variant="dark"/>
 	  <Navbar.Collapse  id="responsive-navbar-nav">
 		<Nav className="me-auto">
 	
@@ -34,9 +32,6 @@ const Dnavbar = () => {
 		  </Nav.Link>
 		  
 			<NavDropdown align="end" title={ <BsPersonCircle style={{color : "black" , height : "36px" , width : "36px"}}/>} id="nav-dropdown ">
-			<NavDropdown.Item eventKey="4.1">Action</NavDropdown.Item>
-			<NavDropdown.Item eventKey="4.2">Another action</NavDropdown.Item>
-			<NavDropdown.Item eventKey="4.3">Something else here</NavDropdown.Item>
 			<NavDropdown.Divider />
 		<div className="d-flex justify-content-center">	<Button onClick={() => dispatch(logOut(navigate))} className="logoutbtn" type="submit">Log out</Button> </div>
 		  </NavDropdown>
@@ -51,3 +46,7 @@ const Dnavbar = () => {
 
 
 export default Dnavbar;
+
+// <NavDropdown.Item eventKey="4.1">Action</NavDropdown.Item>
+// <NavDropdown.Item eventKey="4.2">Another action</NavDropdown.Item>
+// <NavDropdown.Item eventKey="4.3">Something else here</NavDropdown.Item>
