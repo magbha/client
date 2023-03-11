@@ -6,7 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 
-import { BsFillBellFill, BsPersonCircle,  } from "react-icons/bs";
+import { BsFillArrowDownSquareFill, BsFillBellFill, BsPersonCircle,  } from "react-icons/bs";
 import { Button } from "react-bootstrap";
 import { logOut } from "../../../JS/Actions/sign";
 import { useDispatch } from "react-redux";
@@ -19,7 +19,7 @@ const Dnavbar = () => {
     <div >
 	<Navbar  collapseOnSelect expand="lg" bg="light" variant="dark">
 	<Container fluid>
-	  <Navbar.Toggle aria-controls="responsive-navbar-nav" bg="dark"/>
+	  <Navbar.Toggle aria-controls="responsive-navbar-nav" > <BsFillArrowDownSquareFill/> </Navbar.Toggle>
 	  <Navbar.Collapse  id="responsive-navbar-nav">
 		<Nav className="me-auto">
 	
