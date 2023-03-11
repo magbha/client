@@ -44,11 +44,7 @@ const Bnavbar = () => {
           }
           id="nav-dropdown-drop-up-centered "
         >
-          <NavDropdown.Item eventKey="4.1">Action</NavDropdown.Item>
-          <NavDropdown.Item eventKey="4.2">Another action</NavDropdown.Item>
-          <NavDropdown.Item eventKey="4.3">
-            Something else here
-          </NavDropdown.Item>
+         
           <NavDropdown.Divider />
           <div className="d-flex justify-content-center">
             {" "}
@@ -75,3 +71,10 @@ const Bnavbar = () => {
 };
 
 export default Bnavbar;
+
+
+// <NavDropdown.Item eventKey="4.1">Action</NavDropdown.Item>
+// <NavDropdown.Item eventKey="4.2">Another action</NavDropdown.Item>
+// <NavDropdown.Item eventKey="4.3">
+//   Something else here
+// </NavDropdown.Item>
