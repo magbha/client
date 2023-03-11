@@ -56,7 +56,7 @@ const SignIn = () => {
         </Form.Group>
         <div className="sinSbtns d-flex justify-content-center">
           <Button onClick={handleSubmit} className="sinSendbtn" type="submit" disabled={loading}>
-            {loading ? <> Submiting  <Spinner animation="border" variant="success" /> </> : "Submit"}
+            {loading ? <> Submiting  <Spinner size="sm" animation="border" variant="success" /> </> : "Submit"}
           </Button>
           <div className="sinSignSpanDiv">
           <span className="sinSignspan ">   

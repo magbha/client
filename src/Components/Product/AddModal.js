@@ -129,7 +129,7 @@ function AddModal({show , handleClose}) {
   </Form.Group>
     <div className="Sbtns d-flex justify-content-center">
       <Button className="Sendbtn" type="submit" disabled={Loading}>
-      {Loading ? <> Submiting  <Spinner animation="border" variant="success" /> </> : "Submit"}
+      {Loading ? <> Submiting  <Spinner size="sm" animation="border" variant="success" /> </> : "Submit"}
       </Button>
     </div>
   </Form>

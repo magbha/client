@@ -73,7 +73,7 @@ const BranchModal = ({ show, handleClose }) => {
             ></Form.Group>
             <div className="Sbtns d-flex justify-content-center">
               <Button onClick={handleSubmit} className="Sendbtn" type="submit" disabled={Loading}>
-              {Loading ? <> Submiting  <Spinner animation="border" variant="success" /> </> : "Submit"}
+              {Loading ? <> Submiting  <Spinner size="sm" animation="border" variant="success" /> </> : "Submit"}
               </Button>
             </div>
           </Form>
