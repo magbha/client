@@ -100,7 +100,7 @@ const Sign = () => {
               </Form.Group>
               <div className="Sbtns d-flex justify-content-center">
               <Button onClick={handleSubmit} className="Sendbtn" type="submit" disabled={loading}>
-            {loading ? <> "Submiting " <Spinner animation="border" variant="success" /> </> : "Submit"}
+            {loading ? <> Submiting  <Spinner animation="border" variant="success" /> </> : "Submit"}
               </Button>
               <span className='signspan'>   Have an account? <NavLink  className='Signbtn'  to="/sign-in">Log In now  </NavLink> </span>
 
