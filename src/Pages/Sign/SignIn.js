@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Container, Image } from "react-bootstrap";
 import Button from "react-bootstrap/esm/Button";
 import Form from "react-bootstrap/Form";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
 import useWindowSize from "../../Components/ScreenSize";
 import { logIn } from "../../JS/Actions/sign";
@@ -10,6 +10,7 @@ import "./sin.css";
 
 import SignIMG from "./SignINIMG.svg";
 const SignIn = () => {
+  const loading = useSelector((state) => state?.persistedReducer?.loading)
   const sSize = useWindowSize();
 
 
@@ -52,7 +53,7 @@ const SignIn = () => {
           />
         </Form.Group>
         <div className="sinSbtns d-flex justify-content-center">
-          <Button onClick={handleSubmit} className="sinSendbtn" type="submit">
+          <Button onClick={handleSubmit} className="sinSendbtn" type="submit" disabled={loading}>
             Submit
           </Button>
           <div className="sinSignSpanDiv">
